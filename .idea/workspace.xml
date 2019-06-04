@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89e275c8-ee51-4b94-ba3e-aef0f4350073" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/baitapcautrucdk02.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyentapcautruc3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123.html" beforeDir="false" afterPath="$PROJECT_DIR$/123.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai3bien.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai3bien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cautruc2.html" beforeDir="false" afterPath="$PROJECT_DIR$/cautruc2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cautruc3.html" beforeDir="false" afterPath="$PROJECT_DIR$/cautruc3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dieukien.html" beforeDir="false" afterPath="$PROJECT_DIR$/dieukien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luyentapcaccautrucif&amp;else.html" beforeDir="false" afterPath="$PROJECT_DIR$/luyentapcaccautrucif&amp;else.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/luyentapvecautruc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namnhuan2.html" beforeDir="false" afterPath="$PROJECT_DIR$/namnhuan2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thayifbangswitch.html" beforeDir="false" afterPath="$PROJECT_DIR$/thayifbangswitch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thuchanhsukienchuot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thuchanhsukienchuot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thuchanhtoantu1.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanhtoantu1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toantu.html" beforeDir="false" afterPath="$PROJECT_DIR$/toantu.html" afterDir="false" />
-    </list>
+    <list default="true" id="89e275c8-ee51-4b94-ba3e-aef0f4350073" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,31 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sudungvonglapfor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sudungvonglapfor1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -114,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1034" />
     <option name="y" value="18" />
     <option name="width" value="860" />
@@ -129,6 +89,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -175,16 +136,15 @@
       <workItem from="1559524044473" duration="7986000" />
       <workItem from="1559563114216" duration="2640000" />
       <workItem from="1559610333425" duration="12887000" />
-      <workItem from="1559661676215" duration="1461000" />
+      <workItem from="1559661676215" duration="1960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64474000" />
+    <option name="totallyTimeSpent" value="64973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1034" y="18" width="860" height="980" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24981523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -199,7 +159,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.25276074" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.23276836" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -468,8 +428,8 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sudungvonglapfor1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="252">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
