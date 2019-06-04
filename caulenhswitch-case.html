@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập tháng: <input type="number" id="nhapthang">
+<button onclick="nhap()">Tính số ngày</button>
+<p id="kq"></p>
+<script>
+    function nhap() {
+      var  month = parseInt(document.getElementById("nhapthang").value);
+      switch (month) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+              document.getElementById("kq").innerHTML="Tháng này có 31 ngày"
+      }
+    }
+</script>
+</body>
+</html>
