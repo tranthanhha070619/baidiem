@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var luong = parseInt(prompt("Nhap so tien thu nhap ca nhan don vi trieu dong: "));
+    var thue=1/100;
+    if (luong > 84) {
+        thue = luong * (35 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong > 44) {
+        thue = luong * (30 / 100);
+        alert("thue cua ban la:" + thue);
+    } else if (luong > 24) {
+        thue = luong * (25 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong > 14) {
+        thue = luong * (20 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong > 9) {
+        thue = luong * (15 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong > 6) {
+        thue = luong * (10 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong > 4) {
+        thue = luong * (5 / 100);
+        alert("thue cua ban la: " + thue);
+    } else if (luong <= 4) {
+        thue = luong * (0 / 100);
+        alert("thue cua ban la: " + thue);
+    }
+</script>
+</body>
+</html>

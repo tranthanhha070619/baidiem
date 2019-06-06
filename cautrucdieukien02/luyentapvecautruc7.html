@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    var a = parseInt(prompt("Nhập a: "));
+    var b = parseInt(prompt("Nhập b: "));
+    var c = parseInt(prompt("Nhập c"));
+    var delta = b * b - 4 * a * c;
+
+    if (a === 0) {
+        if (b === 0) {
+            if (c === 0)
+                alert("phuong trinh vo so nghiem: ");
+            else
+                alert("phuong trinh vo nghiem: ");
+        } else {
+            let x1 = -b / c;
+            alert("phuong trinh co mot nghiem la: " + x1);
+
+        }
+    } else {
+        alert(delta);
+        if (delta < 0)
+            alert("phuong trinh vo nghiem: ");
+        if (delta === 0) {
+            let x1 = -b / (2 * a);
+            alert("phuong trinh co nghiem kep: " + x1);
+        }
+
+       if(delta > 0)
+        {
+            //alert((-b - Math.sqrt(delta))/2/a);
+            let x1 = (-b - Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b + Math.sqrt(delta)) / (2 * a);
+            alert("phuong trinh co hai nghiem: " + x1 + " " + x2);
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
