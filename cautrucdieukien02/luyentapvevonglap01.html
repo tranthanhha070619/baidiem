@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>JAvaScript</h2>
+<p id= "demo"></p>
+<script>
+    var text = "";
+    var i;
+    for (i = 0; i < 100; i ++){
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
 </body>
 </html>
