@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dao nguoc cac phan tu trong mang</title>
+</head>
+<body>
+<script>
+    var x = [7, 12 , 14 , 16 , 18 , 20 , 15 ,9 , 5 , 6];
+    var dao = 0;
+    var nguoc = x.length - 1;
+    while (dao < nguoc) {
+        var b = x[dao];
+        x[dao] = x[nguoc];
+        x[nguoc] = b;
+        dao ++;
+        nguoc --;
+    }
+    document.write(x)
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao va thao tac </title>
+        <style>
+            body{padding-top: 50px}
+        </style>
+</head>
+<body>
+    <input type="text" id="txtValue" />
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_arry();" />
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();" />
+    <div id="resuft"></div>
+    <script>
+        var x = 0;
+        var arry = Array();
+        function add_element_to_arry() {
+            arry[x] = document.getElementById("txtValue").value;
+            alert("Element: " + arry[x] + "Add at index " + x);
+            X++;
+
+            document.getElementById("txtValue ").value = " ";
+
+
+        }
+
+        function display_array() {
+            var e = "<hr/>";
+            for (var i = 0; i < array.length; i++) {
+                e += "Element" + i + " = " + arry[i] + "<br/>";
+            }
+            document.getElementById("resuft").innerHTML = e;
+        }
+    </script>
+</body>
+</html>
