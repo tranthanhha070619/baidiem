@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển in thường thành in hoa</title>
+</head>
+<button onclick="myFunction()">Run</button>
+<p id="demo"></p>
+<script>
+    var str = 'Ha noi mua nay nong lam';
+    document.getElementById("demo").innerHTML = str;
+    function myFunction() {
+        var content = str.toLocaleUpperCase();
+        document.getElementById("demo").innerHTML = content;
+    }
+</script>
+</body>
+</html>
+
+
+
+

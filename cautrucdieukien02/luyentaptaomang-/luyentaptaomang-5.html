@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi ký tự trong mảng</title>
+</head>
+<body>
+<button onclick="myFunction()">Run</button>
+<p id = "demo"></p>
+<script>
+    var str = 'khoa - hoc - chia - se - kinh nghiem';
+document.getElementById("demo").innerHTML = x;
+    function myFunction() {
+        var content = str.replace(/-/g , '_');
+        document.getElementById("demo").innerHTML = content;
+    }
+</script>
+</body>
+</html>
