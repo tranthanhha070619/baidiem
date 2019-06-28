@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+<script>
+    function tudien(n) {
+        var english = ['computer', 'table', 'chair', 'project', 'whiteboard', 'cup', 'pen'];
+        var vietnam = ['máy tính', 'cái bàn', 'ghế', 'dự án', 'bảng trắng', 'ly tách', 'bút mực'];
+        for (var i = 0; i < english.length; i++) {
+            if (n == english[i]) {
+                return document.write(vietnam[i])
+            }
+        }
+            return document.write('khong tim thay');
+    }
+    var m = prompt("Nhap tu dien: ");
+    tudien(m);
+</script>
+</body>
+</html>

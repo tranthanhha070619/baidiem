@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>remote</title>
+</head>
+<body>
+<script>
+    function remote(kenh, amluong,status) {
+        this.kenh = kenh;
+        this.amluong = amluong;
+        this.status = function () {
+            if (this.status) {
+                return 'tivi on'
+            } else {
+                return 'tivi off'
+            }
+        }
+        this.chuyenkenh = function () {
+
+        }
+        this.tangAmluong = function () {
+            this.amluong++
+            return this.amluong
+        }
+        this.giamAmluong = function () {
+            this.amluong--
+            return this.amluong
+        }
+    };
+    function remote(ma) {
+
+    }
+</script>
+</body>
+</html>

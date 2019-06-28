@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lop hinh tron</title>
+</head>
+<body>
+<script>
+    function hinhTron(banKinh) {
+        this.banKinh = banKinh;
+
+        this.getBankinh = function () {
+            return banKinh;
+}
+        this.getDientich = function () {
+            return Math.PI * banKinh * banKinh;
+    }
+    };
+           var hinhtron = new hinhTron(2);
+            var banKinh = hinhtron.getBankinh();
+            var dientich = hinhtron.getDientich();
+            alert("ban kinh" + banKinh + "; dien tich: " + dientich);
+   /*function hinhTron(banKinh) {
+       this.banKinh= banKinh;
+
+       this.dienTich= function() {
+           return 'bán kính = ' +banKinh + ', có diện tích = '+ 3.14*banKinh*banKinh
+
+       }
+   };
+
+   var S= new hinhTron(5);
+
+   alert(S.dienTich())*/
+</script>
+</body>
+</html>

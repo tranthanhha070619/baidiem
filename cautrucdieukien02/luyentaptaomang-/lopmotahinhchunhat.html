@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinhchunhat</title>
+</head>
+<body>
+<canvas id='canvas1' width="1000" height="800" style="background:yellowgreen; border:yellow 5px"></canvas>
+<script>
+    function rectangle(dai,rong) {
+        this.dai = dai;
+        this.rong = rong;
+        this.calculate = function () {
+            return 'dientich = ' + dai*rong + 'chuvi ='+ (dai + rong)*2
+        }
+    }
+    area = new rectangle(a,b)
+    alert(area.calculate())
+    
+    var a = parseInt(prompt("nhap chieu dai: "));
+    var b = parseInt(prompt("Nhap chieu rong: "));
+    function drawRectangle(a,b) {
+
+        var rect = document.getElementById('canvas1');
+        var ctx = rect.getContext('2d')
+        ctx.fillStyle = 'green';
+        return ctx.fillRect (50,50, a, b)
+    }
+    drawRectangle(a, b)
+
+</script>
+</body>
+</html>

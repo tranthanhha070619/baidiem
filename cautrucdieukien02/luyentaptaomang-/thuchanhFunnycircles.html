@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny circles</title>
+</head>
+<body>
+<canvas id='canvas1' width="1368" height="768" style="border: 1px solid #d3d3d3; background: red">
+</canvas>
+<script>
+    function circle(x, y, r) {
+        var hinhTron = document.getElementById('canvas1');
+        var veHinhTron = hinhTron.getContext('2d');
+        veHinhTron.arc(x,y, r, 0, 2*Math.PI, true);
+        veHinhTron.strokeStyle= 'green';
+        return veHinhTron.stroke();
+    }
+    circle(200, 200, 80)
+    circle(200, 200,Math.floor(Math.random() * 80))
+    circle(300, 200, 80)
+    circle(300, 200,Math.floor(Math.random() * 80))
+    circle(500, 500, 80)
+    circle(500, 500,Math.floor(Math.random() * 80))
+
+</script>
+</body>
+</html>

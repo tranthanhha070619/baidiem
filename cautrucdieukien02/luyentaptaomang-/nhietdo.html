@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiet do</title>
+</head>
+<body>
+<script>
+    function temperature(c) {
+        this.doC = c;
+        this.doi = function () {
+            return 'Do F = ' + (1.8 * this.doC + 32) + '.Do K= ' + (this.doC + 275, 15);
+        }
+    }
+    var nhietDo = new temperature(25)
+    alert(nhietDo.doi());
+</script>
+</body>
+</html>

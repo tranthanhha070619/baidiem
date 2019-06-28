@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đối xứng</title>
+</head>
+<body>
+
+<script>
+    function isPalindrome(s) {
+        var flag=true;
+        for (var i = 0; i < s.length; i++) {
+            if (s[i] != s[s.length - i - 1]) {
+               flag=false;
+                break;
+            }
+        }
+        if (flag==true){
+            alert('chuoi doi xung');
+
+        } else
+            alert(' chuoi ko doi xung');
+    }
+
+    isPalindrome('11111');
+    isPalindrome('12345');
+</script>
+</body>
+</html>

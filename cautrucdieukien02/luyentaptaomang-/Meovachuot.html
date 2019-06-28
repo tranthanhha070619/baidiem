@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+</head>
+<body>
+<div id = 'cat'>
+    <h2>Dịch vụ bắt chuột</h2>
+    <p id= 'tom'></p>
+    <p id= tom2></p>
+</div>
+<div id = 'rat'></div>
+<div id = 'catch'>
+    <input type= button value= 'bắt chuột' id='batchuot' onclick="Catch();" >
+    <p id = 'catch1'>Khối lượng mèo:  </p>
+    <p id = 'catch2'>Chuột trăn trối:  </p>
+</div>
+<body>
+<script>
+function Rat(ten, khoiluong , tocdo, isLive) {
+    this.tenChuot = ten;
+    this.khoiluongChuot = khoiluong;
+    this.tocdoChuot = tocdo;
+    this.isLive = function () {
+        if (isLive) {
+            return 'tao con song'
+        } else {
+            return 'tao da chet'
+        }
+    }
+    this.chuotKeu = function () {
+        return 'gau gau, tao nay'
+    };
+};
+function Cat(ten,khoiluong,tocdo) {
+    this.tenMeo = ten;
+    this.khoiluongMeo = khoiluong;
+    this.tocdoMeo = tocdo;
+    this.meoKeu = function () {
+        return 'meo meo, minh la con meo ngao ke'
+    };
+    this.batChuot = function () {
+        return rat.isLive = false
+    };
+    this.anChuot = function (mouse) {
+        this.khoiluongMeo = rat.khoiluongChuot + this.khoiluongMeo;
+        return this.khoiluongMeo
+    }
+    this.thuaCan = function () {
+        if (this.khoiluongMeo > 20)
+            return alert('meo ú')
+        }
+
+
+        this.thongtin = function () {
+            return 'toi la' + this.tenMeo +
+                '. can nang' + this.khoiluongMeo + 'kg' +
+                '. Toc do ' + this.tocdoMeo + 'km/h. Ai can bat chuot, hay goi cho toi 114'
+        }
+    };
+    var rat = new Rat('Jerry', 4, 20, false);
+
+    var cat = new Cat('Tom', 10, 30);
+    document.getElementById('tom').innerHTML = cat.thongtin()
+    document.getElementById('tom2').innerHTML = cat.meokeu()
+
+    function Catch() {
+        if (cat.tocdoMeo > rat.tocdoChuot) {
+            cat.batChuot();
+            cat.anChuot();
+            cat.thuaCan();
+            document.getElementById('catch1').innerHTML = 'khoi luong meo: ' + cat.khoiluongMeo + 'kg'
+            document.getElementById('catch2').innerHTML = 'chuot tran troi: ' + rat.isLive()
+
+        } else {
+            document.getElementById('catch2').innerHTML = 'thượng đế gọi tên em'
+        }
+    };
+ </script>
+</body>
+ </html>

@@ -5,26 +5,40 @@
     <title>Hàm kiểm tra số nguyên tố</title>
 </head>
 <body>
+<input type="text" id="txtInput">
+<input type="button" onclick="print_snt()" value="kiểm tra">
+<p id="result"></p>
+
 <script>
     function kiem_tra_snt(n) {
         var flag = true;
-            if (n < 2){
+        if (n < 2) {
             flag = false;
-        } else {
-            for (var i = 2 ; i < n-1 ; i ++){
-                if (n % i == 0){
+        } else if (n == 2) {
+            flag = true;
+        }else if (n %2 == 0) {
+            flag = false;
+        }else {
+            for (var i = 3; i <= Math.sqrt(n); i+= 2) {
+                if (n % i == 0) {
                     flag = false;
                     break;
                 }
+                }
+            }
+            return flag;
+        }
+        function print_snt() {
+            var number = document.getElementById("txtInput").value;
+            number = parseInt(number);
+            var html = '';
+            for (var i = 1;i<= number; i++){
+                if (kiem_tra_snt(i)){
+                    html += i + '<br/>';
             }
         }
-    if (flag == true){
-        alert(n + "la so nguyen tố <br/>");
-    } else {
-        alert(n + " không phải là số nguyên tố <br/>");
-    }
-    }
-document.write(x[i]);
+            document.getElementById("result").innerHTML = html;
+        }
 </script>
 </body>
 </html>

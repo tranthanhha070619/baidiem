@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao mang phan tu dang chuoi</title>
+</head>
+<body>
+<script>
+
+
+
+    function check(n)
+    {
+        var ngoisao1 = ['Polaris' , 'Aldebaran', 'Deneb', 'Vega', 'Altair' , 'Dubhe' , 'Regulus'];
+        var ngoisao2 = ['Ursa Minor' , 'Tarurus' , ' Cygns' , 'Lyra' , 'Aquila' , 'Ursa Major','Leo'];
+        for (var i = 0 ;i < ngoisao1.length; i ++) {
+            if (n == ngoisao1[i])
+            {
+                return document.write(ngoisao2[i]);
+            }
+        }
+        return document.write('khong tim thay');
+    }
+    var m = prompt("Nhap vao ten ngoi sao: ");
+    check(m);
+
+</script>
+</body>
+</html>

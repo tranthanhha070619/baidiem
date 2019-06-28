@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mail</title>
+</head>
+<body>
+<form method="post" action='dantri.com' id='form' onsubmit='return kiemTra()' >
+    Kiểm tra email : <input type= 'text' id='email'>
+    <input type='submit' id='submit'>
+</form>
+<script>
+    function kiemTra() {
+        var frm = document.forms['form'].value;
+        var email= frm['email'].value;
+        var regexp = /[A-Za-z0-9]_+@[A-Za-z](\\.[a-z]{2,})+@/;
+        if(regexp.test(email)) {
+            return true
+        }else  return  false
+    }
+
+
+    /*function pattern(str) {
+        regexp = /^[Tranthanhha]*@[gmail]+ (\\.[com]+)$/;
+        if (regexp.test())
+    }*/
+</script>
+</body>
+</html>
