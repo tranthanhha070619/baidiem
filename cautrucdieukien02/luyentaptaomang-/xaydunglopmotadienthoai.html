@@ -6,9 +6,96 @@
 </head>
 <body>
 <script>
-    function mobile() {
+
+
+
+
+
+    class Mobile{
+        constructor(pin){
+            this.name = '';
+            this.pin = pin;
+            this.messages = '';
+            this.receiveMes = '';
+            this.outBox = '';
+            this.inBox = '';
+        }
+        getPin(){
+            return this.pin;
+        }
+        getMessages(){
+            return this.messages;
+        }
+        setMessages(messages){
+            return this.messages += messages;
+        }
+        onPhone(){
+            return true;
+        }
+        offPhone(){
+            return false;
+        }
+        statusPhone(){
+            if(this.onPhone){
+                return 'your phone is on.';
+            }else{
+                return 'Your phone is off.';
+            }
+        }
+        charging(){
+            this.pin = this.pin++;
+        }
+        writtingMessage (str){
+            this.messages += str;
+        }
         
+        sentMessages(name){
+            name.receiveMessages(this.messages);
+            this.outBox = this.receiveMes;
+        }
+
+        receiveMessages (ms){
+            this.receiveMes += ms;
+            this.inBox = this.receiveMes;
+        }
+
+        checkInbox(){
+            return this.inBox;
+        }
+
+        checkOutbox(){
+            return this.outBox;
+        }
+
+        erassingPin(){
+            return this.pin--;
+        }
     }
+
+    let nokia = new Mobile(50);
+    let iphone = new Mobile(50);
+
+
+    console.log(nokia);
+    console.log(iphone);
+
+    nokia.writtingMessage("Héo lô aiphone, tôi là Nôkia");
+    nokia.sentMessages(iphone);
+    
+    iphone.writtingMessage("Tao nhận được tn mày rồi");
+    iphone.sentMessages(nokia);
+
+    nokia.erassingPin();
+    iphone.erassingPin();
+
+    document.write('pin nokia=' + nokia.getPin() + "<br/>");
+    document.write('pin iphone= ' + iphone.getPin() + "<br/>");
+
+    document.write('Iphone checkInbox: ' + iphone.checkInbox()+ "<br/>" );
+    document.write('Iphone checkOutbox: ' + iphone.checkOutbox()+ "<br/>" );
+
+    document.write('Nokia checkInbox: ' + nokia.checkInbox()+ "<br/>" );
+    document.write('Nokia checkOutbox: ' + nokia.checkOutbox()+ "<br/>" )
 </script>
 </body>
 </html>

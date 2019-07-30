@@ -6,42 +6,36 @@
 </head>
 <body>
 <script>
-    function myDate(day,month,year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-
-//
-        this.getDay = function () {
-            return this.day;
-        }
-        this.getMonth = function () {
-            return this.month;
-        }
-        this.getYear = function () {
-            return this.year;
-        }
-//
-        this.setDay = function (day) {
-            this.day = day;
-        }
-        this.setMonth = function (month) {
-            this.month = month;
-        }
-        this.setYear = function (year) {
-            this.year = year;
-        }
+  class thongtin{
+        constructor(day,month,year,sothich){
+       this.day = day;
+       this.month = month;
+       this.year = year;
+        this.sothich = sothich;
+   }
+    getDay(){
+        return this.day;
     }
-//
-    var date = new myDate(7,6,1994);
-//
-    var day = date.getDay();
-    var month = date.getMonth();
-    var year = date.getYear();
-//
-    alert(day + "/" + month + "/" + year);
-
-
+    getMonth(){
+        return this.month;
+    }
+    getYear (){
+        return this.year;
+   } 
+   getSothich(){
+       return this.sothich;
+   }
+   setDay(day){
+       this.day = day;
+   }
+   print (){
+        alert('tôi sinh ngày: ' + this.day + 'tháng '+ this.month + 'năm ' + this.year + 'so thich ' + this.sothich);
+   }
+  }
+        var ha = new thongtin(7,6,1994,"cau ca");
+     ha.print();
+    ha.setDay(8);
+    ha.print();
 </script>
 </body>
 </html>

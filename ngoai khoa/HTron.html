@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        class Circle {
+            constructor(x, y, radius, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+            }
+            render() {
+                let hinhtron = document.getElementById("myCanvas");
+                let context = hinhtron.getContext("2d");
+                context.fillStyle = this.color;
+                context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                context.fill();
+            }
+            dientich() {
+                return this.radius * this.radius * 3.14
+            }
+            chuvi() {
+                return this.radius * 2 * 3.14
+            }
+        }
+        let arct = new Circle(100, 80, 50, '#FF3300');
+        arct.render();
+        document.write("  <br>  " );
+        let s_hinhtron = arct.dientich();
+        document.write("    " + s_hinhtron + "<br>");
+        let c_hinhtron = arct.chuvi();
+        document.write("   " + c_hinhtron);
+    </script>
+</body>
+
+</html>

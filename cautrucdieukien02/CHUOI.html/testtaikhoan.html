@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Taikhoan">
+    <button onclick="console.log(testAccount())">Kiểm Tra</button>
+    <script>
+        function testAccount(){
+            let str = document.getElementById("Taikhoan").value;
+            regexp=  /^[_a-z0-9]{6,}$/;
+            if(regexp.test(str)){
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

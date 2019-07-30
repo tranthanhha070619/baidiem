@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Date{
+            constructor(day,month,year){
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            thongtin(){
+                return this.day + "/" + this.month + "/" + this.year ;
+            }
+        }
+        let sinhnhat = new Date (07,06,1994);
+        let name = sinhnhat.thongtin();
+        console.log("/" + name)
+    </script>
+</body>
+</html>

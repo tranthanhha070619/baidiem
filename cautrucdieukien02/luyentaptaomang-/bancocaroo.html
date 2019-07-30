@@ -3,9 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <title>X O</title>
+    <style>
+        .square{ 
+            width: 30px;
+            height: 30px;
+            text-align: center; 
+            font-size: 18pt ;
+            font-family: bold;
+            font-family: Tahoma;
+        }
+    </style>
+    <script>
+        function startGame() {
+            document.turn = "X";
+            
+            setMessage(document.turn + ' gets to start')
+        }
+        function setMessage(msg) {
+            document.getElementById('message').innerHTML= msg;
+        }
+        function nextMove(square){
+            if(square.innerText=='') {
+            square.innerText= document.turn;
+            switchTurn();
+            } else {
+                setMessage('That square is already used')
+            }
+        }
+        function switchTurn() {
+            if(document.turn == 'X') {
+                document.turn = 'O'
+            } else {
+                document.turn = 'X'
+            }
+            setMessage("It's" + document.turn + "'s Turn")
+        }
+    </script>
+    
 </head>
-<body>
-<div id="20 dong"></div>
-<div id="20 cot"></div>
+<body onload='startGame()'>
+    <h1>PLAY GAME TIC-TOC-TOE</h1>
+    <div id="message">Message will go here</div>
+    <table border="3px">
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+        <tr>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+            <td class='square' onclick="nextMove(this);"></td>
+        </tr>
+
+
+    </table>
 </body>
 </html>

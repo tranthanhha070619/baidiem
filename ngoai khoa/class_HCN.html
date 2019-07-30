@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+    <script>
+        class Hinhchunhat {
+            constructor(x, y, dai, rong, color) {
+                this.x = x;
+                this.y = y;
+                this.dai = dai;
+                this.rong = rong;
+                this.color = color;
+            }
+            canvas() {
+                let cv = document.getElementById("myCanvas");
+                let ctx = cv.getContext("2d");
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.dai, this.rong);
+
+            }
+        }
+        let hv = new Hinhchunhat(20, 20, 200, 100, "red");
+        hv.canvas();
+      
+    </script>
+</body>
+
+</html>

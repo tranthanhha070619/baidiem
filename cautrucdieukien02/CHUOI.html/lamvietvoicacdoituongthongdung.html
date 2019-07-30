@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        let current = new Date();
+        let mybirtday = new Date(1994, 07, 06, 39, 39, 39, 39);
+        let year = current.getFullYear() - mybirtday.getFullYear();
+        document.getElementById('demo').innerHTML = "Tôi đã sống" + " " + year + " " + "năm" + '<br/';
+        let diffTime = current.getTime() - mybirtday.getTime();
+        let month = Math.round(diffTime / 1000 / 60 / 60 / 24 / 30);
+        document.getElementById('demo1').innerHTML = "Tôi đã sống" + " " + month + " " + "tháng" + '<br/';
+        let day = Math.round(diffTime / 1000 / 60 / 60 / 24);
+        document.getElementById('demo2').innerHTML = "Tôi đã sống" + " " + day + " " + "ngày" + '<br/';
+        let hour = Math.round(diffTime / 1000 / 60 / 60);
+        document.getElementById('demo3').innerHTML = "Tôi đã sống" + " " + hour + " " + "giờ" + '<br/';
+        let min = Math.round(diffTime / 1000 / 60);
+        document.getElementById('demo4').innerHTML = "Tôi đã sống" + " " + min + " " + "phút" + '<br/';
+        let sec = Math.round(diffTime / 1000);
+        document.getElementById('demo5').innerHTML = "Tôi đã sống" + " " + sec + " " + "giây" + '<br/';
+        </script>
+        <hr/>
+
+        <h2>Làm việc với Math</h2>
+        <h5>Bước 1: Sinh số ngẫu nhiên</h5>
+        <table>
+        <tr>
+            <td>
+            <button onclick="number()"> 0-10</button>
+            </td>
+
+            <td>
+                <button onclick="number1()"> 0-400</button>
+            </td>
+
+            <td>
+                <button onclick="number2()"> 50-100</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="name"></p>
+                <script>
+                    function number(){
+                        let a = Math.floor(Math.random()*11);
+                        document.getElementById("name").innerHTML = a;
+                    }
+                </script>
+            </td>
+            <td>
+                <p id="name1"></p>
+                <script>
+                    function number1(){
+                        let b = Math.floor(Math.random()*401) + 0;
+                        document.getElementById("name1").innerHTML = b;
+                    }
+                </script>
+            </td>
+            <td>
+                <p id="name2"></p>
+                <script>
+                    function number2(){
+                        let m = Math.floor((Math.random()*101) + 50);
+                        document.getElementById("name2").innerHTML = m;
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+    <h5>Bước 2: Tìm giá trị nhỏ nhất</h5>
+    <tr>
+        <td>
+            <button onclick="min()">Kiểm tra</button>
+        </td>
+        <td>
+            <p id="valuemin"></p>
+            <script>                  
+                    document.getElementById("valuemin").innerHTML = "Giá trị nhỏ nhất là =" + Math.min (5, 7, 2, 9);
+            </script>
+        </td>
+    </tr>
+</table>
+   
+<table>
+    <h5>Bước 3: Tìm luỹ thừa 53</h5>
+    <tr>
+        <td>
+            <button onclick="exponential()">Kiểm tra</button>
+        </td>
+        <td>
+            <p id="Findthepower"></p>
+            <script>
+                document.getElementById("Findthepower").innerHTML= "Lũy thừa là =" +Math.pow(5,3);
+            </script>
+        </td>
+    </tr>
+</table>
+<h5>Bước 4: Tính diện tích của hình tròn có bán kính là 5cm</h5>
+<tr>
+    <td>
+        <p id="sarea"></p>
+        <script>
+            document.getElementById("sarea").innerHTML = Math.PI*Math.pow(0.5,2) ;
+       
+        </script>
+    </td>
+</tr>
+</table>
+<hr/>
+<h2>Làm việc với đối tượng String</h2>
+<h5>Bước 1: Cho sẵn chuỗi như sau: "Tôi yêu ngôn ngữ lập trình Javascript".</h5>
+<p id="count"></p>
+<p id="replace"></p>
+<script>
+    let str = "Tôi yêu ngôn ngữ lập trình Javascript";
+    let count = str.replace(/[^a]/ig, '');
+    let array = str.split(' ');
+    document.getElementById('count').innerHTML = "Count a =" + count.length + ". "+ "Count words ="+array.length+'<br/>';
+   document.getElementById('replace').innerHTML = "String after replace: " + str.replace(/Javascript/ig,'Typescript');
+</script>
+</body>
+</html>

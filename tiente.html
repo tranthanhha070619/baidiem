@@ -5,31 +5,60 @@
     <title>Chuyển đổi tiền tệ </title>
 </head>
 <body>
-<h1>Currency Converter</h1>
-<input type="text" id="VND" size="10" value="0" onchange="vndfunc()"/>
-<label for="USD"> USD </label>
-
-</br>
-
-<input type="text" id="USD" size="10" value="0" onchange="usdfunc()">
-<label for="VND"> VND </label>
-
-<Script>
-var vnd,usd;
-function init()
-{
-    vnd = document.getElementById("VND");
-    usd = document.getElementById("USD");
-}
-function vndfunc()
-{
-    usd.value = parseFloat(vnd.value) * 23000;
-}
-function usdfunc()
-{
-    vnd.value = parseFloat(usd.value) / 23000;
-}
-init();
-</Script>
+    <table >
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" value="" id="Amount">
+            </td>
+            <td>
+                <select name="from" id="from">
+                    <option value="fVND">VietNam(VND)</option>
+                    <option value="fUSD">My(USD)</option>                        
+                </select>
+            </td>
+            <td> 
+                <select name="to" id="to">
+                   <option value="tUSD">My(USD)</option>
+                   <option value="tVND">VietNam(VND)</option>
+                </select>
+            </td>
+            <td>
+                <input id="convert" type="submit" value= "Convert" onclick="chuyentien()" >
+            </td>
+        </tr>
+    </table>
+    <div id="ketqua">Ket qua la: </div>
+    <script>
+        function chuyentien(){
+            let amount = document.getElementById('Amount').value;
+            let amountFloat = parseFloat(amount);
+            let result;
+            let fvalue = document.getElementById('from').value;
+            let tvalue = document.getElementById('to').value;
+            let fmy = fvalue === 'fUSD';
+            let fviet = fvalue === 'fVND';
+            let tmy = tvalue === 'tUSD';
+            let tviet = tvalue === 'tVND'; 
+            const vietmy = 1/23000;
+            const myviet = 23000;
+            if(fviet && tmy){
+                result = amountFloat*vietmy;
+            }else if (fmy && tviet){
+                result = amountFloat*myviet;
+            }else{
+                result = amountFloat;
+            }
+            if(result<0){
+                alert('nhap lai: ');
+            }else{
+            document.getElementById("ketqua").innerHTML= 'Ket qua la: ' + result ;
+           }
+        }
+    </script>
 </body>
 </html>

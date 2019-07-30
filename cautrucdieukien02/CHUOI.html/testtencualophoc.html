@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Kiemtratenlophoc">
+    <button onclick = "console.log(testClassname())">Kiểm tra tên</button>
+    <script>
+        function testClassname(){
+            str = document.getElementById("Kiemtratenlophoc").value;
+            regexp = /^[C,A,P]+(\d{4})+[GHIKLM]$/;
+            if(regexp.test(str)){
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

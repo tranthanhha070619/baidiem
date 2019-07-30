@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai kiem tra 2</title>
+</head>
+
+<body>
+    <script>
+        function tryRemoveFromArray(arr, index) {
+            for (i = 0; i < arr.length; i++) {
+                if (index >= 0 && index <= arr.length) {
+                    arr.splice(index, 1);
+                    return document.write("mãng = " + "[" + arr + "]");
+                }
+                else {
+                    return document.write("mãng = " + "[" + arr + "]");
+                }
+            }
+        }
+        let number = prompt('mời bạn nhập: ');
+        var array = [12, 6, 3, 7, 21, 5, 7];
+        tryRemoveFromArray(array, number);
+
+    </script>
+    </script>
+</body>
+
+</html>
