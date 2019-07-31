@@ -2,18 +2,19 @@ let canvas = document.getElementById("game");
 let context = canvas.getContext('2d');
 
 let ball = {
-    x:20,
-    y:20,
-    dx :7,
-    dy :2,
+    x:15,
+    y:15,
+    dx :5,
+    dy :3,
     radius : 15,
+    score: 0,
 };
-
+//thanh chắn
 let bars = {
     width: 100,
     height: 20,
     x:0,
-    y: canvas.height - 10,
+    y: canvas.height - 20,
     speed: 10,
     isMovingLeft: false,
     isMovingRight:false,
@@ -39,7 +40,7 @@ document.addEventListener('keydown',function(event){
         bars.isMovingRight = true;
     }
 });
-
+//vẽ banh
 function drawBall(){
     context.beginPath();
     context.arc(ball.x,ball.y,ball.radius,0,Math.PI*2);
@@ -47,17 +48,28 @@ function drawBall(){
     context.fill();
     context.closePath();
 }
+//vẽ thanh chắn
 function drawBars(){
     context.beginPath();
     context.rect(bars.x,bars.y,bars.width,bars.height);
     context.fill();
     context.closePath();
 }
-
+function drawScore() {
+    context.beginPath();
+    context.font = "20px Georgia";
+    context.fillStyle = 'red'
+    context.fillText("score: " + ball.score, 20, 20);
+    context.closePath();
+}
+function drawgameover(){
+  var img = document.getElementById("img");
+  context.drawImage(img, 25, 50);
+}
 
     
 
-// xử lý bóng chạm biên;
+// xử lý bóng chạm biên !
 function Ballbordercollisionhandling(){
     if(ball.x < ball.radius || ball.x > canvas.width -ball.radius){
         ball.dx = -ball.dx;
@@ -66,47 +78,59 @@ function Ballbordercollisionhandling(){
         ball.dy = -ball.dy;
     }
 }
+//sử lý va chạm biên giới của thanh chắn!
  function Barsbordercollisionhandling(){
      if(ball.x +ball.radius >= bars.x && ball.x + ball.radius <= bars.x + bars.width && 
         ball.y + ball.radius >= canvas.height - bars.height ){
             ball.dy = -ball.dy;
+            ball.score ++;
+            
+                
+            
         }
  }
 
-//vẽ bóng;
+//tọa độ!
 function positionBall(){
     ball.x +=ball.dx;
     ball.y +=ball.dy;
 }
+//xư lý đường biên thanh chắn!
 function borderprocessing(){
     if(bars.isMovingLeft){
         bars.x -= bars.speed;
     }else if(bars.isMovingRight){
         bars.x += bars.speed;
     }
-    //xư lý đường biên bars!!
+    
     if(bars.x < 0){
         bars.x = 0;
     }else if(bars.x > canvas.width - bars.width){
         bars.x = canvas.width -bars.width;
     }
 }
+//kiểm tra games over!
     function checkGameOver(){
         if(ball.y > canvas.height - ball.radius){
             isGameOver = true;
         }
     }
 
+    function handleGameOver(){
+        context.clearRect(0,0,canvas.width,canvas.height); 
+        drawgameover();
+    }
 function draw(){
     if(!isGameOver){
     context.clearRect(0,0,canvas.width,canvas.height); 
         drawBall();
         drawBars();
-        
+        drawScore();
        
         Ballbordercollisionhandling();
         Barsbordercollisionhandling();
         positionBall();
+        
         borderprocessing();
 
         checkGameOver()
@@ -114,11 +138,13 @@ function draw(){
 //cải thiện độ giật của quả bóng!!
         requestAnimationFrame(draw);
 }else{
-        console.log("Games Over");
+         handleGameOver();
 }
 }
 draw();
-
+    function startGame() {
+          location.reload();
+}
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giá trị nhỏ nhất</title>
+</head>
+<body>
+    <script>
+        function findMinScore(arr){
+            let minScore = arr[0];
+            for(let i = 1;i<=arr.length;i++){
+                if(arr[i] < minScore){
+                    minScore = arr[i];
+                }
+            }
+            return document.write("Điểm số thấp nhất là: " + minScore);
+        }
+        let score = [10,5,2,8,-1,6,8];
+        let score1 = [2,4,0,5,1];
+        let score2 = [8,6,2,6,1,1,4];
+        findMinScore(score);
+            document.write("<br/>");
+        findMinScore(score1);
+            document.write("<br/>");
+        findMinScore(score2);
+            document.write("<br/>");
+
+    </script>
+</body>
+</html>

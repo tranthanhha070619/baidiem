@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Game Guess Number</h3>
+    <input type="button" value="play" onclick="guessnumber()">
+    <script>
+        function guessnumber() {
+            var number = prompt("nhập số từ 1-10: ");
+            var n = Math.round(Math.random()*10);
+            if(number==n){
+                alert("chúc mừng bạn đã đoán đúng");
+            }else{
+                alert("số đúng: " + n + " " + "thử lại lần nữa nào")
+            }
+        }
+   </script>
+</body>
+</html>
