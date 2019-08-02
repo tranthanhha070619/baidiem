@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let telephone = ['0964587123','0395416547','0906549882','0946551233',
+        '0779900558','0371125478','0977324544','0884517155','0815476259','0845123678'];
+        let regexp1 = /^[0][9][678]/;
+        let regexp2 = /^[0][3][2-9]/;
+        let regexp3 = /^[0][8][1-9]/;
+
+        function displayTelephone(){
+            for(let i = 0; i<telephone.length; i++){
+                document.write(telephone[i] + "<br/>");
+            }
+        }
+
+        function search(){
+            for(let i = 0; i<telephone.length;i++){
+                if(regexp1.test(telephone[i]) || regexp2.test(telephone[i]) || regexp3.test(telephone[i])){
+                    document.write(telephone[i] + "<br/>");
+                }
+            }
+        }
+        document.write("List telephone number:" + '<br/>');
+        displayTelephone();
+        document.write("<hr/>");
+        document.write('Viettel telephone number is:' + "<br/>");
+        search();
+    </script>
+</body>
+</html>
