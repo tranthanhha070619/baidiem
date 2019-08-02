@@ -1,6 +1,6 @@
 let canvas = document.getElementById("game");
 let context = canvas.getContext('2d');
-var img = new Image();
+let img = new Image();
 img.src = "over.jpg";
 
 let ball = {
