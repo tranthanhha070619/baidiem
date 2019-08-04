@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai kiem tra 2</title>
+</head>
+<body>
+    <script>
+
+        function tryRemoveFromArray(arr,index){
+           
+            for(let i = 1; i <= arr.length; i++){
+                if(index >= 0 && index <= arr.length){
+                    arr.splice(index,1);
+                    return document.write("mảng = " + arr);
+                }else {
+                    return document.write("mảng = " + arr);
+                }
+            }
+        }
+        let number = [12,6,3,7,21,5,7];       
+        let number1 = [12,6,3,7,21,5,7];
+        let number2 = [12,6,3,7,21,5,7];
+        let number3 = [12,6,3,7,21,5,7];
+        tryRemoveFromArray(number,2);
+        document.write("<br/>");
+        tryRemoveFromArray(number1,0);
+        document.write("<br/>");
+        tryRemoveFromArray(number2,7);
+        document.write("<br/>");
+        tryRemoveFromArray(number3,-2);
+    </script>
+</body>
+</html>
