@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        box-sizing: border-box
+    }
+    .container {
+        width: 300px;
+        margin: auto;
+    }
+    .container span {
+        width: 100%;
+        height: 50px;
+        display: block;
+        background: blue;
+        text-align: center;
+        font-size: 40px;
+    }
+    .container .box {
+        width: 100px;
+        height: 100px;
+        float: left;
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 85px;
+        text-align: center;
+    }
+    .container .box:hover {
+        background: pink
+    }
+    button {
+        display: block;
+        width: 200px;
+        height: 40px;
+        margin: 10px auto;
+    }
+    .win{
+        background: red;
+    }
+</style>
+
+<body>
+    <div class="container" id="main">
+        <span id="turn">Play</span>
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7"></div>
+        <div class="box" id="box8"></div>
+        <div class="box" id="box9"></div>
+    </div>
+    <div style="clear:left"></div>
+    <button onclick="replay()">Play Again</button>
+
+    <script>
+        let turn = document.getElementById('turn');
+        let boxes = document.querySelectorAll("#main div");
+        let xo = 0;
+        function selectWInner(b1, b2, b3) {
+            b1.classList.add('win');
+            b2.classList.add('win');
+            b3.classList.add('win');
+            turn.innerHTML = b1.innerHTML +" "+ "is Winner";
+        }
+        function getWinner() {
+            let box1 = document.getElementById('box1'),
+                box2 = document.getElementById('box2'),
+                box3 = document.getElementById('box3'),
+                box4 = document.getElementById('box4'),
+                box5 = document.getElementById('box5'),
+                box6 = document.getElementById('box6'),
+                box7 = document.getElementById('box7'),
+                box8 = document.getElementById('box8'),
+                box9 = document.getElementById('box9');
+            if (box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML) {
+                selectWInner(box1, box2, box3);
+            }
+            else if (box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML) {
+                selectWInner(box4, box5, box6);
+            }
+            else if (box7.innerHTML !== "" && box7.innerHTML === box8.innerHTML && box7.innerHTML === box9.innerHTML) {
+                selectWInner(box7, box8, box9);
+            }
+            else if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML) {
+                selectWInner(box1, box4, box7);
+            }
+            else if (box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML) {
+                selectWInner(box2, box5, box8);
+            }
+            else if (box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML === box9.innerHTML) {
+                selectWInner(box3, box6, box9);
+            }
+            else if (box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML) {
+                selectWInner(box1, box5, box9);
+            }
+            else if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML === box7.innerHTML) {
+                selectWInner(box3, box5, box7);
+            }
+        }
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].onclick = function () {
+                if (this.innerHTML !== "X" && this.innerHTML !== "O") {
+                    if (xo % 2 === 0) {
+                        this.innerHTML = "X";
+                        turn.innerHTML = "O Turn Now";
+                        getWinner();
+                        xo += 1;
+                    }
+                    else {
+                        this.innerHTML = "O";
+                        turn.innerHTML = "X Turn Now";
+                        getWinner();
+                        xo += 1;
+                    }
+                }
+            };
+        };
+        function replay() {
+            for (let i = 0; i < boxes.length; i++) {
+                boxes[i].innerHTML = "";
+                turn.innerHTML = "Play";
+                boxes[i].classList.remove('win');
+            }
+        }
+    </script>
+
+
+   
+</body>
+</html>
